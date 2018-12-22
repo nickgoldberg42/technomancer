@@ -7,6 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 import com.example.spongetoobog.technomancer.AlignmentType;
 import com.example.spongetoobog.technomancer.ClassType;
 import com.example.spongetoobog.technomancer.RaceType;
+import com.example.spongetoobog.technomancer.SizeType;
 
 @Entity
 public class Character {
@@ -27,7 +28,7 @@ public class Character {
     private RaceType race;
 
     @ColumnInfo(name="size")
-    private String size;
+    private SizeType size;
 
     @ColumnInfo(name="gender")
     private String gender;
@@ -39,8 +40,47 @@ public class Character {
     private int height;
 
     @ColumnInfo(name="weight")
-    private String weight;
+    private int weight;
 
     @ColumnInfo(name="alignment")
     private AlignmentType alignment;
+
+    @ColumnInfo(name="strength")
+    private int strength;
+
+    @ColumnInfo(name="dexterity")
+    private int dexterity;
+
+    @ColumnInfo(name="constitution")
+    private int constitution;
+
+    @ColumnInfo(name="intelligence")
+    private int intelligence;
+
+    @ColumnInfo(name="wisdom")
+    private int wisdom;
+
+    @ColumnInfo(name="charisma")
+    private int charisma;
+
+    @ColumnInfo(name="hp")
+    private int hp;
+
+    @ColumnInfo(name="fortitude")
+    private int fortitude;
+
+    @ColumnInfo(name="reflex")
+    private int reflex;
+
+    @ColumnInfo(name="will")
+    private int will;
+
+    @ColumnInfo(name="BAB")
+    private int bab;
+
+    @ColumnInfo(name="speed")
+    private int speed;
+
+    @ColumnInfo(name="gold")
+    private double gold;
 }
