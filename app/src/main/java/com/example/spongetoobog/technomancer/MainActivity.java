@@ -11,7 +11,7 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
     //Declare Needed Stuff
-    Button combatManeuverButton;
+    Button combatManeuverButton, useSkillButton, attackButton;
     TextView actionText;
 
     private static final String TAG = "MainActivity";
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize Button
         combatManeuverButton = (Button) findViewById(R.id.combatManeuverButton);
+        useSkillButton = (Button) findViewById(R.id.useSkillButton);
+        attackButton = (Button) findViewById(R.id.attackButton);
 
 
 
@@ -36,6 +38,28 @@ public class MainActivity extends AppCompatActivity {
                     if(view == combatManeuverButton){
                         //TODO goes to Combat Maneuver Fragment
                         //openCombatManeuverFragment();
+                    }
+                }
+            }
+        );
+
+        useSkillButton.setOnClickListener(new View.OnClickListener(){
+              @Override
+              public void onClick(View view){
+                  if(view == useSkillButton){
+                      //TODO create Skills Fragment
+                      //openSkillsFragment();
+                  }
+              }
+          }
+        );
+
+        attackButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    if(view == attackButton){
+                        //TODO create attacks Fragment
+                        //openAttacksFragment();
                     }
                 }
             }
