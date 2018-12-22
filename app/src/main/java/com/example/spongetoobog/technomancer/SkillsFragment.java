@@ -1,4 +1,4 @@
-package com.example.jphillips.textadventure;
+package com.example.spongetoobog.technomancer;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,7 +17,7 @@ public class SkillsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.combatmaneuversfragment_layout, container, false);
+        View view = inflater.inflate(R.layout.skillsfragment_layout, container, false);
         backButton = (Button) view.findViewById((R.id.backButton));
         diplomacyButton = (Button) view.findViewById(R.id.diplomacyButton);
 

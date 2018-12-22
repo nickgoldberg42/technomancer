@@ -1,6 +1,7 @@
 package com.example.spongetoobog.technomancer;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     TextView actionText;
 
     private static final String TAG = "MainActivity";
+    private FragmentManager fm = getSupportFragmentManager();
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +51,9 @@ public class MainActivity extends AppCompatActivity {
         useSkillButton.setOnClickListener(new View.OnClickListener(){
               @Override
               public void onClick(View view){
-                  if(view == useSkillButton){
                       //TODO create Skills Fragment
-                      //openSkillsFragment();
-                  }
+                      fm.beginTransaction().replace(R.id.skillsFragment,
+                      new SkillsFragment(), "fragsf").commit();
               }
           }
         );
